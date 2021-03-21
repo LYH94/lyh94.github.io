@@ -15,6 +15,9 @@ import VueScrollTo from 'vue-scrollto'
 import Particles from 'particles.vue'
 // typed-js
 import VueTypedJs from 'vue-typed-js'
+// aos
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import { faLaptopCode, faPenFancy, faLanguage, faGraduationCap, faChevronUp, faChild } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope, faFolder } from '@fortawesome/free-regular-svg-icons'
@@ -28,6 +31,8 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueScrollTo)
 Vue.use(Particles)
 Vue.use(VueTypedJs)
+
+AOS.init()
 
 new Vue({
   router,
