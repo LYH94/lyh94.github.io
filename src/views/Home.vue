@@ -6,12 +6,14 @@
     <portfolio></portfolio>
     <experience></experience>
     <education></education>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Education from '../components/Education.vue'
 import Experience from '../components/Experience.vue'
+import Footer from '../components/Footer.vue'
 import Introduce from '../components/Introduce.vue'
 import Navbar from '../components/Navbar.vue'
 import Portfolio from '../components/Portfolio.vue'
@@ -22,6 +24,6 @@ export default {
     return {
     }
   },
-  components: { Navbar, Introduce, Skill, Portfolio, Experience, Education }
+  components: { Navbar, Introduce, Skill, Portfolio, Experience, Education, Footer }
 }
 </script>
