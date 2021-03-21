@@ -95,7 +95,7 @@
     <div class="introduce-box">
       <div class="home-photo" data-aos="zoom-in">
       </div>
-      <vue-typed-js :strings="['李育瑄', '前端工程師']" :loop="true" :backDelay="1500" :typeSpeed="150">
+      <vue-typed-js :strings="['李育瑄', '前端工程師']" :loop="true" :backDelay="1500" :typeSpeed="150" :width="150" :height="150">
         <h2>我是<span class="typing"></span></h2>
       </vue-typed-js>
       <div class="mt-2 about-me">
