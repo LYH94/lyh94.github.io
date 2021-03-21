@@ -5,10 +5,12 @@
     <skill></skill>
     <portfolio></portfolio>
     <experience></experience>
+    <education></education>
   </div>
 </template>
 
 <script>
+import Education from '../components/Education.vue'
 import Experience from '../components/Experience.vue'
 import Introduce from '../components/Introduce.vue'
 import Navbar from '../components/Navbar.vue'
@@ -20,6 +22,6 @@ export default {
     return {
     }
   },
-  components: { Navbar, Introduce, Skill, Portfolio, Experience }
+  components: { Navbar, Introduce, Skill, Portfolio, Experience, Education }
 }
 </script>
