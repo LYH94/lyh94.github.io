@@ -3,13 +3,15 @@
       <h2>製作一個 Vue 的履歷</h2>
       <p><b-badge variant="secondary" class="mr-2" v-for="badge in badges" :key="badge.id">{{ badge }}</b-badge></p>
       <h5 id="nav-1" class="mt-2 highlight">Vue-cli 的套件使用</h5>
-      <div id="nav-a" v-for="npm in npms" :key="npm">
+      <div id="nav-a" v-for="npm in npms" :key="npm.id">
         <p># {{ npm.text }}</p>
         <a :href="npm.link">{{ npm.name }}</a>
       </div>
+    <div class="pb-5">
       <h5 id="nav-2" class="highlight mt-4">Navbar、Footer 滾動監聽參考寫法</h5>
       <p># Navbar.vue 預設背景透明，滾動到一段距離之後添加背景色</p>
       <codemirror v-model="code1" :options="cmOptions"></codemirror>
+    </div>
   </div>
 </template>
 
