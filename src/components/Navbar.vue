@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss">
   .change_color {
-    background-color:#333;
+    background-color:#1f2229;
   }
   .home-navbar .navbar-nav .nav-link:hover a{
     color: rgba(255,255,255,.75);

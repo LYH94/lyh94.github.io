@@ -18,6 +18,9 @@ import VueTypedJs from 'vue-typed-js'
 // aos
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+// 網頁程式碼 codemirror
+import VueCodemirror from 'vue-codemirror'
+import 'codemirror/lib/codemirror.css'
 
 import { faLaptopCode, faPenFancy, faLanguage, faGraduationCap, faChevronUp, faChild } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope, faFolder } from '@fortawesome/free-regular-svg-icons'
@@ -28,6 +31,7 @@ Vue.config.productionTip = false
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+Vue.use(VueCodemirror)
 Vue.use(VueScrollTo)
 Vue.use(Particles)
 Vue.use(VueTypedJs)
