@@ -1,5 +1,6 @@
 {
-  "name": "init",
+  "type": "module",
+  "name": "resume",
   "version": "0.1.0",
   "private": true,
   "scripts": {
