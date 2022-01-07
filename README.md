@@ -1,3 +1,3 @@
 ## Vue-My resume
 
-![image](./readme.jpg)
+![image](./readme.png)
