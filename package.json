@@ -22,6 +22,7 @@
     "vue": "^2.6.11",
     "vue-codemirror": "^4.0.6",
     "vue-loading-overlay": "^3.4.2",
+    "vue-lottie": "^0.2.1",
     "vue-router": "^3.2.0",
     "vue-scrollto": "^2.20.0",
     "vue-typed-js": "^0.1.2",

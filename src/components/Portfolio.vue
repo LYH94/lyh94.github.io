@@ -1,35 +1,41 @@
 <template>
-  <b-container fluid id="portfolio">
-    <b-row class="portfolio-row m-0">
-      <b-col class="portfolio-col" cols="12" md="6" lg="4" v-for="info in portfolios" :key="info._id">
-        <b-card
-          class="portfolio-card"
-          :data-aos="info.dataAos" data-aos-easing="ease-out-cubic" data-aos-duration="800"
-        >
-        <b-card
-          overlay
-          :img-src="info.img"
-          img-alt="Card Image"
-          text-variant="white"
-          title="Github repo"
-          class="portfolio-img"
-        >
-          <b-card-text>
-            <a :href="info.repo" target="_blank"><font-awesome-icon class="icon" :icon="['fab', 'github']"/></a>
-          </b-card-text>
-        </b-card>
-          <b-card-title>{{ info.title }}</b-card-title>
-          <b-card-text class="flex-fill">
-            <ul>
-              <li v-for="li in info.text" :key="li._id">{{li}}</li>
-            </ul>
-            <h5 class="text-center"><b-badge pill variant="light" v-for="badge in info.skills" :key="badge">{{ badge }}</b-badge></h5>
-          </b-card-text>
-          <p class="text-center"><b-button :href="info.link" variant="outline-warning" target="_blank">DEMO</b-button></p>
-        </b-card>
-      </b-col>
-    </b-row>
-  </b-container>
+  <div id="portfolio" class="bg-dark-blue">
+    <b-container class="pb-3 pb-lg-6">
+      <div class="title-box text-white">
+        <h2 class="title text-lg-8xl font-weight-bold">PORTFOLIO</h2>
+        <h3>作品集</h3>
+      </div>
+      <b-row>
+        <b-col class="mb-3" cols="12" md="6" lg="4" v-for="info in portfolios" :key="info._id">
+          <b-card
+            no-body
+            class="mb-2 h-100 portfolio-card"
+            :data-aos="info.dataAos" data-aos-easing="ease-out-cubic" data-aos-duration="800"
+          >
+              <div class="position-relative">
+                <b-card-img :src="info.img" alt="Image" class="rounded-0"></b-card-img>
+                <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column">
+                  <a :href="info.repo" target="_blank"><font-awesome-icon class="icon mb-1 text-white" :icon="['fab', 'github']"/></a>
+                  <p class="mb-0 text-white">github repo</p>
+                  <!-- <h5 class="text-center"><b-badge pill variant="light" class="portfolio-badge" v-for="badge in info.skills" :key="badge">{{ badge }}</b-badge></h5> -->
+                </div>
+              </div>
+            <b-card-body class="d-flex flex-column justify-content-between">
+              <div>
+                <b-card-title>{{ info.title }}</b-card-title>
+                <b-card-text>
+                  <ul class="pl-3">
+                    <li v-for="li in info.text" :key="li._id">{{li}}</li>
+                  </ul>
+                </b-card-text>
+              </div>
+              <div class="text-center"><b-button :href="info.link" variant="outline-warning" target="_blank">DEMO</b-button></div>
+            </b-card-body>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
 </template>
 
 <script>
@@ -96,79 +102,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-#portfolio {
-  background: $mainColor;
-}
-.portfolio-row {
-  padding: 2rem 2rem;
-}
-.portfolio-col {
-  margin-bottom: 1rem;
-}
-.portfolio-card {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.1);
-  .card-body{
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  }
-  .card-title{
-  text-align: center;
-  margin-top: 8px;
-  }
-  .badge {
-  display: none;
-  margin-right: 3px;
-  transition: 5s;
-  }
-}
-
-.demo-icon {
-  box-shadow: 2px 2px 0 #f27c7c;
-}
-.portfolio-card:hover .badge {
-  display: inline-block;
-}
-.icon {
-  font-size: 40px;
-}
-.portfolio-card .btn {
-  box-shadow: 2px 2px 0 #ffc107;
-  &:hover {
-    box-shadow: none;
-  }
-}
-.portfolio-img .card-text a{
-  text-decoration:none;
-  color: #ffffff;
-}
-.portfolio-img .card-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-}
-.portfolio-card:hover .portfolio-img .card-body{
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-}
-.portfolio-img .card-title,
-.portfolio-img .card-text {
-  display: none;
-}
-.portfolio-img,
-.portfolio-img .card-img {
-  border-radius: 20px;
-}
-.portfolio-card:hover .portfolio-img .card-title,
-.portfolio-card:hover .portfolio-img .card-text {
-  display: block;
-}
-</style>

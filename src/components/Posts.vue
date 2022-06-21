@@ -7,7 +7,7 @@
         <p># {{ npm.text }}</p>
         <a :href="npm.link">{{ npm.name }}</a>
       </div>
-    <div class="pb-5">
+    <div class="pb-3 pb-lg-6">
       <h5 id="nav-2" class="highlight mt-4">Navbar、Footer 滾動監聽參考寫法</h5>
       <p># Navbar.vue 預設背景透明，滾動到一段距離之後添加背景色</p>
       <codemirror v-model="code1" :options="cmOptions"></codemirror>

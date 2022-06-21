@@ -1,7 +1,8 @@
 <template>
   <div id="home">
     <Navbar></Navbar>
-    <introduce></introduce>
+    <Banner></Banner>
+    <Project></Project>
     <skill></skill>
     <portfolio></portfolio>
     <experience></experience>
@@ -11,12 +12,13 @@
 </template>
 
 <script>
+import Banner from '../components/Banner.vue'
 import Education from '../components/Education.vue'
 import Experience from '../components/Experience.vue'
 import Footer from '../components/Footer.vue'
-import Introduce from '../components/Introduce.vue'
 import Navbar from '../components/Navbar.vue'
 import Portfolio from '../components/Portfolio.vue'
+import Project from '../components/Project.vue'
 import Skill from '../components/Skill.vue'
 export default {
   name: 'Home',
@@ -24,6 +26,6 @@ export default {
     return {
     }
   },
-  components: { Navbar, Introduce, Skill, Portfolio, Experience, Education, Footer }
+  components: { Navbar, Banner, Project, Skill, Portfolio, Experience, Education, Footer }
 }
 </script>

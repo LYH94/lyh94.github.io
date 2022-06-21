@@ -1,27 +1,31 @@
 <template>
-  <b-container fluid id="experience">
-    <h1>工作經歷</h1>
-    <b-card no-body class="overflow-hidden work-card" v-for="work in experiences" :key="work._id" :data-aos="work.dataAos" data-aos-easing="ease-out-cubic" :data-aos-duration="work.aosDuration">
-      <b-row no-gutters>
-        <b-col class="col-left" md="3">
-          <div class="circle">{{ work.num }}</div>
-          <b-card-body class="card-left">
-            <h4 v-for="text in work.time" :key="text.id">{{ text }}
-            </h4>
-          </b-card-body>
-        </b-col>
-        <b-col md="9">
-          <b-card-body class="card-right" :title="work.company">
-            <b-card-text>
-              <ul>
-                <li class="work-duty" v-for="duties in work.duty" :key="duties._id">{{ duties }}</li>
-              </ul>
-            </b-card-text>
-          </b-card-body>
-        </b-col>
-      </b-row>
-    </b-card>
-  </b-container>
+  <div id="experience" class="parallax">
+    <b-container class="pb-5 pb-lg-6">
+      <div class="title-box text-white">
+        <h2 class="title text-lg-8xl font-weight-bold">EXPERIENCE</h2>
+        <h3>工作經歷</h3>
+      </div>
+      <b-card no-body class="mb-3 experience-card" v-for="work in experiences" :key="work._id" :data-aos="work.dataAos" data-aos-easing="ease-out-cubic" :data-aos-duration="work.aosDuration">
+        <b-row no-gutters>
+          <b-col md="3" class="bg-pearl">
+            <b-card-body>
+              <h4 v-for="text in work.time" :key="text.id">{{ text }}
+              </h4>
+            </b-card-body>
+          </b-col>
+          <b-col md="9">
+            <b-card-body :title="work.company">
+              <b-card-text>
+                <ul>
+                  <li v-for="duties in work.duty" :key="duties._id">{{ duties }}</li>
+                </ul>
+              </b-card-text>
+            </b-card-body>
+          </b-col>
+        </b-row>
+      </b-card>
+    </b-container>
+  </div>
 </template>
 
 <script>
@@ -58,67 +62,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-#experience {
-  padding: 20px 30px;
-  background:rgb(230, 229, 225);
-}
-.col-left .card-body{
-  padding: 0.75rem 1.25rem 0.5rem 1.25rem;
-}
-.col-left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.work-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: rgba(255, 255, 255, 0.3);
-  background-clip: border-box;
-  border: 2px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-.work-card:hover {
-  background-color: #fff;
-}
-.work-card:hover .card-right .card-title{
-  display: inline-block;
-  background: rgba(255, 193, 7, 0.6);
-}
-
-.work-duty {
-  font-size: 18px;
-  font-weight: 500;
-}
-.circle {
-  width: 50px;
-  height: 50px;
-  background: rgba(218, 76, 29, 0.5);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #333;
-  font-weight: 500;
-}
-@media (min-width: 992px) {
-  #experience {
-    padding: 20px 90px;
-  }
-  .work-card:hover .circle {
-    transform: scale(8);
-    background: rgb(218, 76, 29, 0.3);
-  }
-  .work-card:hover .col-left {
-    background: rgba(211, 211, 211, 0.3);
-  }
-  .work-card:hover .card-right .card-title{
-    background: linear-gradient(180deg,rgba(255,255,255,0) 40%, rgba(255, 193, 7, 0.6) 60%);
-  }
-}
-</style>

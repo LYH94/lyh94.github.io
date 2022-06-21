@@ -1,6 +1,6 @@
 <template>
-  <footer id="footer">
-    <div class="container-fluid h-100">
+  <footer id="footer" class="bg-black text-white py-3">
+    <b-container fluid class="h-100">
       <b-row class="text-center">
         <b-col>
           &copy; 2021 All rights reserved | This page is made by Lee
@@ -10,9 +10,9 @@
           </a>
         </b-col>
       </b-row>
-    </div>
-    <div id="go_top_page" class="animate__animated animate__bounce" style="animation-duration: 3s;" v-show="scrollPosition > 550">
-      <a href="#"><font-awesome-icon :icon="['fas', 'chevron-up']" style="font-size: 16px; color: white;"/></a>
+    </b-container>
+    <div id="go_top_page" class="animate__animated animate__bounce go_top_page" style="animation-duration: 3s;" v-show="scrollPosition > 550">
+      <a href="#" class="d-block text-center"><font-awesome-icon :icon="['fas', 'chevron-up']" style="font-size: 16px; color: white;"/></a>
     </div>
   </footer>
 </template>
@@ -40,30 +40,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-#footer{
-  padding: 40px 0;
-  color: #fff;
-  background: $blue;
-}
-
-#go_top_page {
-  width: 40px;
-  height: 40px;
-  background: #ffc107;
-  border-radius: 50%;
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  z-index: 9999;
-}
-
-#go_top_page a {
-  display: block;
-  text-align: center;
-  line-height: 40px;
-  color: #fff;
-  text-decoration: none;
-}
-</style>

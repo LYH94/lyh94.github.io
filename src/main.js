@@ -22,14 +22,20 @@ import 'aos/dist/aos.css'
 import VueCodemirror from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 
-import { faLaptopCode, faPenFancy, faLanguage, faGraduationCap, faChevronUp, faChild } from '@fortawesome/free-solid-svg-icons'
+import Lottie from 'vue-lottie'
+
+import './assets/scss/style.scss'
+
+import { faLaptopCode, faPenFancy, faLanguage, faGraduationCap, faChevronUp, faChild, faLink } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope, faFolder } from '@fortawesome/free-regular-svg-icons'
 import { faGithub, faCss3Alt } from '@fortawesome/free-brands-svg-icons'
-library.add(faGithub, faCss3Alt, faLaptopCode, faPenFancy, faLanguage, faGraduationCap, faChevronUp, faEnvelope, faChild, faFolder)
+Vue.component('lottie', Lottie)
+library.add(faGithub, faCss3Alt, faLaptopCode, faPenFancy, faLanguage, faGraduationCap, faChevronUp, faEnvelope, faChild, faLink, faFolder)
 
 Vue.config.productionTip = false
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('lottie', Lottie)
 
 Vue.use(VueCodemirror)
 Vue.use(VueScrollTo)

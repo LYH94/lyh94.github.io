@@ -1,7 +1,7 @@
 <template>
   <div id="navabr">
     <b-navbar toggleable="lg" type="dark" fixed="top" v-b-scrollspy="{offset:100, method:'auto'}" :class="{change_color: scrollPosition > 300}" class="home-navbar">
-      <b-navbar-brand to="/">李育瑄的履歷表</b-navbar-brand>
+      <b-navbar-brand to="/">Lee的履歷表</b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
