@@ -3,7 +3,7 @@
     <b-container class="pb-3 pb-lg-6">
       <div class="title-box text-white">
         <h2 class="title text-lg-8xl font-weight-bold">PROJECT</h2>
-        <h3>工作專案</h3>
+        <h3></h3>
       </div>
       <b-row no-gutters class="align-items-center mb-lg-4">
         <b-col class="mb-3 project-box" cols="6" md="3">
@@ -15,7 +15,7 @@
                   <font-awesome-icon class="" :icon="['fas', 'link']"/>
                 </div>
               </div>
-              <div class="text-white text-center mt-2">旅宿系統</div>
+              <div class="text-white text-center mt-2">Accommodation System</div>
             </div>
           </a>
         </b-col>
@@ -28,10 +28,10 @@
                   <font-awesome-icon class="" :icon="['fas', 'link']"/>
                 </div>
                 <div class="project-list-highlight">
-                  主力專案
+                  Key Project
                 </div>
               </div>
-              <div class="text-white text-center mt-2">旅遊ERP</div>
+              <div class="text-white text-center mt-2">Travel Enterprise resource planning (ERP)</div>
             </div>
           </a>
         </b-col>
@@ -44,14 +44,13 @@
                   <font-awesome-icon class="" :icon="['fas', 'link']"/>
                 </div>
               </div>
-              <div class="text-white text-center mt-2">客服中心</div>
+              <div class="text-white text-center mt-2">FAQ Website</div>
             </div>
           </a>
         </b-col>
         <b-col class="mb-3 project-box" cols="12" md="3">
           <div class="project-text">
-            專業旅遊 ERP 系統頁面開發，將改版前的 <a href="https://demo.clicugo.com/C/tw/home">舊網站</a>
-            散落的 CSS 轉成 SCSS 結構，提升效率 80%，並建立一套 SCSS 變數化管理的客製化 CSS，完美解決客戶樣式獨立客製化頁面開發的需求，與後端 JAVA 工程師合作完成 Restful API、AJAX 資料串接，使用 Git 做版本控制
+            I developed a travel ERP system interface by converting outdated CSS into a structured SCSS framework, boosting efficiency by 80%. I created a customizable SCSS management system, collaborated with Java engineers on Restful APIs and AJAX integration, and used Git for version control.
           </div>
         </b-col>
       </b-row>

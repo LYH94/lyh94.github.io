@@ -3,7 +3,7 @@
     <b-container class="pb-3 pb-lg-6">
       <div class="title-box text-white">
         <h2 class="title text-lg-8xl font-weight-bold">PORTFOLIO</h2>
-        <h3>作品集</h3>
+        <h3></h3>
       </div>
       <b-row>
         <b-col class="mb-3" cols="12" md="6" lg="4" v-for="info in portfolios" :key="info._id">
@@ -45,8 +45,8 @@ export default {
       portfolios: [
         {
           img: './portfolio/portfolio-01.png',
-          title: 'Vue 電商網站',
-          text: ['可瀏覽商品，將商品加入購物車、註冊/登入會員、送出訂單', '前端使用 Vue CLI、BootstrapVue、Responsive Web Design、Axios與後台要資料', '後端使用Node.js、MongoDB'],
+          title: 'Vue E-Commerce Website',
+          text: ['Features: Product browsing, adding items to cart, user registration/login, and order submission.', 'Frontend: Vue CLI, BootstrapVue, Responsive Web Design, Axios for API requests.', 'Backend: Node.js, MongoDB.'],
           link: 'https://lyh94.github.io/Vue-Store/#/',
           skills: ['Vue', 'Bootstrap-Vue', 'Scss', 'Axios', 'Vue-cli', 'MongoDB', 'body-parser'],
           repo: 'https://github.com/LYH94/Vue-Store',
@@ -54,8 +54,8 @@ export default {
         },
         {
           img: './portfolio/portfolio-02.jpg',
-          title: 'Vue 番茄鐘',
-          text: ['使用 Vuex 和 Vue-router', '番茄鐘計時器包含 To Do List ，可以選擇鬧鐘聲音', '支援 PWA'],
+          title: 'Vue Pomodoro Timer',
+          text: ['Features: Timer with To-Do List, alarm sound selection, and PWA support.', 'Built with Vuex and Vue Router.'],
           link: 'https://lyh94.github.io/Vue-Pomodoro/#/',
           skills: ['Vue', 'Vuex', 'Vue-router', 'Stylus', 'Pug', 'Vue-cli', 'localStorage', 'Bootstrap-Vue'],
           repo: 'https://github.com/LYH94/Vue-Pomodoro',
@@ -64,7 +64,7 @@ export default {
         {
           img: './portfolio/portfolio-06.jpg',
           title: 'CSS ZEN GARDEN',
-          text: ['不更改 html 結構，不使用套件使用純 css 切板、原生 js，做出森林風格的頁面。', '使用 @keyframes 動畫、滾動視差效果'],
+          text: ['Created a forest-themed page using only CSS and vanilla JavaScript without altering the HTML structure or using plugins.', 'Implemented animations with @keyframes and parallax scrolling effects.'],
           link: 'https://lyh94.github.io/css_zen-garden/',
           skills: ['Html', 'CSS', 'jQuery', 'keyframes'],
           repo: 'https://github.com/LYH94/css_zen-garden',
@@ -72,8 +72,8 @@ export default {
         },
         {
           img: './portfolio/portfolio-04.jpg',
-          title: '景點配對翻牌遊戲',
-          text: ['使用 jQuery、CSS 3D 製作的翻牌遊戲。'],
+          title: 'Tourist Spot Matching Card Game',
+          text: ['A card-matching game created with jQuery and CSS 3D transformations.'],
           link: 'https://lyh94.github.io/jq-cards/index.html',
           skills: ['Html', 'CSS', 'jQuery', 'keyframes'],
           repo: 'https://github.com/LYH94/jq-cards',
@@ -81,8 +81,8 @@ export default {
         },
         {
           img: './portfolio/portfolio-05.jpg',
-          title: '外星人綁架乳牛小遊戲',
-          text: ['使用 jQuery 練習 DOM 操作和動畫製作的遊戲，乳牛會隨機出現'],
+          title: 'Alien Cow Abduction Game',
+          text: ['A DOM manipulation and animation practice game where cows appear randomly.'],
           link: 'https://lyh94.github.io/jq-alien_abduction/',
           skills: ['Html', 'CSS', 'jQuery', 'keyframes'],
           repo: 'https://github.com/LYH94/jq-alien_abduction',
@@ -90,8 +90,8 @@ export default {
         },
         {
           img: './portfolio/portfolio-03.jpg',
-          title: 'LINE 機器人',
-          text: ['可查詢當季好蔬果網站的 LINE 機器人', '部署到 Heroku', '使用 Node.js'],
+          title: 'LINE Chatbot',
+          text: ['A chatbot integrated with a seasonal produce website.', 'Deployed on Heroku using Node.js.'],
           link: 'https://github.com/LYH94/linebot-fruit_price',
           skills: ['Html', 'CSS', 'javaScript', 'Node.js', 'cheerio'],
           repo: 'https://github.com/LYH94/linebot-fruit_price',

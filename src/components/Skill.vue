@@ -3,7 +3,7 @@
     <b-container class="pb-3 pb-lg-6">
       <div class="title-box text-white">
         <h2 class="title text-lg-8xl font-weight-bold">SKILL</h2>
-        <h3>技能</h3>
+        <h3></h3>
       </div>
       <div class="overflow-hidden">
         <b-row class="skill-row">
@@ -37,29 +37,29 @@ export default {
       skills: [
         {
           icon: ['fab', 'css3-alt'],
-          title: '前端開發',
+          title: 'Frontend Development',
           text: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery', 'Vue.js'],
           dataAos: ['fade-right'],
           class: 'ribbon1'
         },
         {
           icon: ['fas', 'laptop-code'],
-          title: '後端技術',
-          text: ['Node.js', 'MongoDB'],
+          title: 'Backend Technologies',
+          text: ['C', 'C++', 'C#', 'Node.js', 'MongoDB'],
           dataAos: ['fade-left'],
           class: 'ribbon2'
         },
         {
           icon: ['fas', 'pen-fancy'],
-          title: '視覺設計',
+          title: 'Visual Design',
           text: ['Photoshop', 'Illustrator', 'Figma', 'UI / UX'],
           dataAos: ['fade-right'],
           class: 'ribbon3'
         },
         {
           icon: ['fas', 'language'],
-          title: '語言能力',
-          text: ['英文 TOEIC 820', '韓文 TOPIK 5級'],
+          title: 'Language Proficiency',
+          text: ['English', 'Chinese', 'Korean'],
           dataAos: ['fade-left'],
           class: 'ribbon4'
         }

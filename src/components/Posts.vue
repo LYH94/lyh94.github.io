@@ -1,15 +1,15 @@
 <template>
   <div id="posts">
-      <h2>製作一個 Vue 的履歷</h2>
+      <h2>Create a Vue Resume</h2>
       <p><b-badge variant="secondary" class="mr-2" v-for="badge in badges" :key="badge.id">{{ badge }}</b-badge></p>
-      <h5 id="nav-1" class="mt-2 highlight">Vue-cli 的套件使用</h5>
+      <h5 id="nav-1" class="mt-2 highlight">Usage of Vue-cli Packages</h5>
       <div id="nav-a" v-for="npm in npms" :key="npm.id">
         <p># {{ npm.text }}</p>
         <a :href="npm.link">{{ npm.name }}</a>
       </div>
     <div class="pb-3 pb-lg-6">
-      <h5 id="nav-2" class="highlight mt-4">Navbar、Footer 滾動監聽參考寫法</h5>
-      <p># Navbar.vue 預設背景透明，滾動到一段距離之後添加背景色</p>
+      <h5 id="nav-2" class="highlight mt-4">Navbar, Footer scroll listener reference implementation</h5>
+      <p># Navbar.vue default background transparent, adding background color after scrolling a certain distance</p>
       <codemirror v-model="code1" :options="cmOptions"></codemirror>
     </div>
   </div>
@@ -24,32 +24,32 @@ export default {
     return {
       npms: [
         {
-          text: '自我介紹 Introduce.vue 使用背景粒子效果',
+          text: 'About Me Introduce.vue with background particle effect',
           link: 'https://www.npmjs.com/package/particles.vue',
           name: 'particles.vue'
         },
         {
-          text: '載入效果',
+          text: 'Loading Effect',
           link: 'https://www.npmjs.com/package/vue-loading-overlay',
           name: 'Vue Loading Overlay Component'
         },
         {
-          text: 'Navbar 滾動效果',
+          text: 'Navbar scroll effect',
           link: 'https://www.npmjs.com/package/vue-scrollto',
           name: 'vue-scrollto'
         },
         {
-          text: '網頁動畫效果',
+          text: 'Web animation effect',
           link: 'https://www.npmjs.com/package/aos',
           name: 'aos'
         },
         {
-          text: '程式碼效果',
+          text: 'Code result',
           link: 'https://www.npmjs.com/package/vue-codemirror',
           name: 'vue-codemirror'
         },
         {
-          text: '打字效果',
+          text: 'Typing effect',
           link: 'https://www.npmjs.com/package/vue-typed-js',
           name: 'vue-typed-js'
         }

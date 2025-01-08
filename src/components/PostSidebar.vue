@@ -1,8 +1,8 @@
 <template>
   <div id="postsidebar">
     <b-nav class="postside-bar" vertical>
-      <b-nav-item href="#nav-1">Vue-cli 的套件使用</b-nav-item>
-      <b-nav-item href="#nav-2">Navbar、Footer 滾動監聽參考寫法</b-nav-item>
+      <b-nav-item href="#nav-1">Vue-cli packages</b-nav-item>
+      <b-nav-item href="#nav-2">Navbar、Footer listener reference implementation</b-nav-item>
     </b-nav>
   </div>
 </template>

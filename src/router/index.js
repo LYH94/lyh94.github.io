@@ -10,7 +10,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '首頁'
+      title: 'Resumé'
     }
   },
   {
@@ -21,7 +21,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
     meta: {
-      title: '關於'
+      title: 'About'
     }
   },
   {
@@ -29,7 +29,7 @@ const routes = [
     name: 'Categories',
     component: () => import(/* webpackChunkName: "categories" */ '../views/Categories.vue'),
     meta: {
-      title: '目錄'
+      title: 'Categories'
     },
     children: [
       {
@@ -37,7 +37,7 @@ const routes = [
         name: 'posts',
         component: () => import(/* webpackChunkName: "admin-products" */ '../components/Posts.vue'),
         meta: {
-          title: '貼文'
+          title: 'Articles'
         }
       }
     ]
