@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid id="introduce" class="p-0">
+  <div class="container-fluid p-0" id="introduce">
     <Particles
       id="tsparticles"
       :options="{
@@ -95,23 +95,31 @@
     <div>
       <div data-aos="zoom-in"></div>
       <div>
-        <b-button variant="light" @click="show = !show">關於我<font-awesome-icon class="ml-2 about-icon" :icon="['fas', 'child']" /></b-button>
+        <button class="btn btn-light" @click="show = !show">
+          關於我
+          <font-awesome-icon class="ms-2 about-icon" :icon="['fas', 'child']" />
+        </button>
       </div>
       <transition name="top-left">
-        <b-card v-if="show">
-        <p>我想轉職成為前端工程師，是因為我第一次接觸到程式是在幫公司用 GoDaddy 建立官網，在架設網站的過程中，發現網站設計會影響使用者與公司的互動，良好的網站規劃可以提供使用者好的體驗，也能降低公司客服的工作量，自己越做越有心得後，先在 Udemy 上購買程式課程學習，後來希望轉職成為前端工程師，所以加入泰山職訓局，得到系統化的訓練，往下看看我的作品吧。</p>
-        </b-card>
+        <div v-if="show" class="card">
+          <div class="card-body">
+            <p>我想轉職成為前端工程師，是因為我第一次接觸到程式是在幫公司用 GoDaddy 建立官網，在架設網站的過程中，發現網站設計會影響使用者與公司的互動，良好的網站規劃可以提供使用者好的體驗，也能降低公司客服的工作量，自己越做越有心得後，先在 Udemy 上購買程式課程學習，後來希望轉職成為前端工程師，所以加入泰山職訓局，得到系統化的訓練，往下看看我的作品吧。</p>
+          </div>
+        </div>
       </transition>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <script>
-export default {
-  data () {
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+  setup() {
+    const show = ref(false)
     return {
-      show: false
+      show
     }
   }
-}
+})
 </script>

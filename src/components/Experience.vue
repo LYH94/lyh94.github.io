@@ -1,35 +1,45 @@
 <template>
   <div id="experience" class="parallax">
-    <b-container class="pb-5 pb-lg-6">
+    <div class="container pb-5 pb-lg-6">
       <div class="title-box text-white">
-        <h2 class="title text-lg-8xl font-weight-bold">EXPERIENCE</h2>
+        <h2 class="title text-lg-8xl fw-bold">EXPERIENCE</h2>
         <h3></h3>
       </div>
-      <b-card no-body class="mb-3 experience-card" v-for="work in experiences" :key="work._id" :data-aos="work.dataAos" data-aos-easing="ease-out-cubic" :data-aos-duration="work.aosDuration">
-        <b-row no-gutters>
-          <b-col md="3" class="bg-pearl">
-            <b-card-body>
-              <h4 v-for="text in work.time" :key="text.id">{{ text }}
-              </h4>
-            </b-card-body>
-          </b-col>
-          <b-col md="9">
-            <b-card-body :title="work.company">
-              <b-card-text>
+      
+      <div class="card mb-3 experience-card" 
+          v-for="work in experiences" 
+          :key="work._id"
+          :data-aos="work.dataAos"
+          data-aos-easing="ease-out-cubic"
+          :data-aos-duration="work.aosDuration">
+        <div class="row g-0">
+          <div class="col-md-3 bg-pearl">
+            <div class="card-body">
+              <h4 v-for="text in work.time" :key="text">{{ text }}</h4>
+            </div>
+          </div>
+          
+          <div class="col-md-9">
+            <div class="card-body">
+              <h5 class="card-title">{{ work.company }}</h5>
+              <div class="card-text">
                 <ul>
-                  <li v-for="duties in work.duty" :key="duties._id">{{ duties }}</li>
+                  <li v-for="duties in work.duty" :key="duties">{{ duties }}</li>
                 </ul>
-              </b-card-text>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
-    </b-container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   data () {
     return {
       experiences: [
@@ -66,5 +76,5 @@ export default {
       ]
     }
   }
-}
+})
 </script>

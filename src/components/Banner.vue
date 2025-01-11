@@ -1,26 +1,27 @@
 <template>
   <div id="banner" class="bg-black">
     <div class="banner-container">
-      <lottie :options="defaultOptions" v-on:animCreated="handleAnimation"/>
+      <Vue3Lottie :animationData="animationData" />
     </div>
   </div>
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import animationData from '@/assets/json/developer.json'
 
-export default {
+export default defineComponent({
   name: 'Banner',
-  data () {
+  data() {
     return {
-      defaultOptions: { animationData: animationData },
+      animationData,
       animationSpeed: 1
     }
   },
   methods: {
-    handleAnimation (anim) {
+    handleAnimation(anim) {
       this.anim = anim
     }
   }
-}
+})
 </script>

@@ -1,32 +1,31 @@
 <template>
   <div id="app">
-    <loading
-      :active.sync="isLoading"
+    <loading 
+      v-model:active="isLoading"
+      :is-full-page="true"
       :background-color="'#000'"
       :color="'#ff0'"
-      :opacity= "1"
+      :opacity="1"
       :loader="'dots'"
-    ></loading>
+    />
     <router-view/>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, onMounted } from 'vue'
 import Loading from 'vue-loading-overlay'
-import 'vue-loading-overlay/dist/vue-loading.css'
+import 'vue-loading-overlay/dist/css/index.css'
 
-export default {
-  name: 'Home',
-  data () {
-    return {
-      isLoading: true
-    }
-  },
-  components: { Loading },
-  mounted () {
+const isLoading = ref(true)
+
+onMounted(() => {
+  if (document.readyState === 'complete') {
+    isLoading.value = false
+  } else {
     window.addEventListener('load', () => {
-      this.isLoading = false
-    })
+      isLoading.value = false
+    }, { once: true })
   }
-}
+})
 </script>

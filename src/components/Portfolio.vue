@@ -1,40 +1,59 @@
 <template>
   <div id="portfolio" class="bg-dark-blue">
-    <b-container class="pb-3 pb-lg-6">
+    <div class="container pb-3 pb-lg-6">
       <div class="title-box text-white">
-        <h2 class="title text-lg-8xl font-weight-bold">PORTFOLIO</h2>
-        <h3></h3>
+      <h2 class="title text-lg-8xl fw-bold">PORTFOLIO</h2>
+      <h3></h3>
       </div>
-      <b-row>
-        <b-col class="mb-3" cols="12" md="6" lg="4" v-for="info in portfolios" :key="info._id">
-          <b-card
-            no-body
-            class="mb-2 h-100 portfolio-card"
-            :data-aos="info.dataAos" data-aos-easing="ease-out-cubic" data-aos-duration="800"
+      <div class="row">
+        <div 
+          v-for="info in portfolios" 
+          :key="info._id"
+          class="col-12 col-md-6 col-lg-4 mb-3"
+        >
+          <div
+            class="card mb-2 h-100 portfolio-card"
+            :data-aos="info.dataAos"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="800"
           >
-              <div class="position-relative">
-                <b-card-img :src="info.img" alt="Image" class="rounded-0"></b-card-img>
-                <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column">
-                  <a :href="info.repo" target="_blank"><font-awesome-icon class="icon mb-1 text-white" :icon="['fab', 'github']"/></a>
-                  <p class="mb-0 text-white">github repo</p>
-                  <!-- <h5 class="text-center"><b-badge pill variant="light" class="portfolio-badge" v-for="badge in info.skills" :key="badge">{{ badge }}</b-badge></h5> -->
+            <div class="position-relative">
+              <img :src="info.img" :alt="info.title" class="card-img-top rounded-0">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center flex-column">
+                <a :href="info.repo" target="_blank">
+                  <font-awesome-icon 
+                    class="icon mb-1 text-white" 
+                    :icon="['fab', 'github']"
+                  />
+                </a>
+                <p class="mb-0 text-white">github repo</p>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">{{ info.title }}</h5>
+                <div class="card-text">
+                  <ul class="pl-3">
+                    <li v-for="(item, index) in info.text" :key="index">
+                      {{item}}
+                    </li>
+                  </ul>
                 </div>
               </div>
-            <b-card-body class="d-flex flex-column justify-content-between">
-              <div>
-                <b-card-title>{{ info.title }}</b-card-title>
-                <b-card-text>
-                  <ul class="pl-3">
-                    <li v-for="li in info.text" :key="li._id">{{li}}</li>
-                  </ul>
-                </b-card-text>
+              <div class="text-center">
+                <a 
+                  :href="info.link" 
+                  class="btn btn-outline-warning"
+                  target="_blank"
+                >
+                  DEMO
+                </a>
               </div>
-              <div class="text-center"><b-button :href="info.link" variant="outline-warning" target="_blank">DEMO</b-button></div>
-            </b-card-body>
-          </b-card>
-        </b-col>
-      </b-row>
-    </b-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

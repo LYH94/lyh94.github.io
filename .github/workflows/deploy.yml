@@ -15,11 +15,11 @@ jobs:
       # 步驟一：複製程式碼
       - name: checkout
         # 使用的 actions/checkout 複製程式碼
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v4
       # 步驟二：編譯
       - name: Install and Build
         run: |
-          npm install
+          npm ci
           npm run build
       # 步驟三：部署
       - name: Deploy

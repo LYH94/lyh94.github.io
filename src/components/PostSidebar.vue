@@ -1,17 +1,11 @@
 <template>
   <div id="postsidebar">
-    <b-nav class="postside-bar" vertical>
-      <b-nav-item href="#nav-1">Vue-cli packages</b-nav-item>
-      <b-nav-item href="#nav-2">Navbar、Footer listener reference implementation</b-nav-item>
-    </b-nav>
+    <nav class="nav flex-column postside-bar">
+      <a class="nav-link" href="#nav-1">Vue-cli packages</a>
+      <a class="nav-link" href="#nav-2">Navbar、Footer listener reference implementation</a>
+    </nav>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss">
 .postside-bar .nav-item a:hover {

@@ -1,8 +1,5 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-
-Vue.use(VueRouter)
 
 const routes = [
   {
@@ -10,16 +7,13 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: 'Resumé'
+      title: 'Resume'
     }
   },
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    component: () => import('../views/About.vue'),
     meta: {
       title: 'About'
     }
@@ -27,15 +21,15 @@ const routes = [
   {
     path: '/categories',
     name: 'Categories',
-    component: () => import(/* webpackChunkName: "categories" */ '../views/Categories.vue'),
+    component: () => import('../views/Categories.vue'),
     meta: {
       title: 'Categories'
     },
     children: [
       {
-        path: '/categories/posts',
+        path: 'posts',
         name: 'posts',
-        component: () => import(/* webpackChunkName: "admin-products" */ '../components/Posts.vue'),
+        component: () => import('../components/Posts.vue'),
         meta: {
           title: 'Articles'
         }
@@ -44,11 +38,12 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
+const router = createRouter({
+  history: createWebHistory(),
   routes
 })
 
-router.afterEach((to, from) => {
+router.afterEach((to) => {
   document.title = to.meta.title
 })
 

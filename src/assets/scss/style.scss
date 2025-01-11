@@ -1,5 +1,10 @@
 @import "bootstrap/scss/bootstrap";
-@import './font.scss';
+@import './font';
+
+@import "bootstrap/scss/functions";
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
 body {
   font-family: 'Noto Sans TC', sans-serif;
@@ -84,6 +89,14 @@ a {
   &:hover {
     color: #0050ff;
   }
+}
+
+.hover-card {
+  transition: transform 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
 }
 
 .ribbon {
@@ -257,14 +270,6 @@ a {
   z-index: 9999;
   a {
     line-height: 40px;
-  }
-}
-
-.education-box{
-  background: #fff;
-  border: 2px solid #bd7070;
-  &:not(:last-child) {
-    border-bottom: 4px solid #ffd844;
   }
 }
 

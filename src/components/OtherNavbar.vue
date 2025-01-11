@@ -1,29 +1,35 @@
 <template>
-  <b-container fluid id="othernavabr">
-    <b-navbar toggleable="lg" type="dark" fixed="top">
-      <b-navbar-brand to="/">Lee's Resume(Technologies Used)</b-navbar-brand>
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/">Home</b-nav-item>
-          <b-nav-item to="/categories">Categories</b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
-  </b-container>
+  <div id="othernavbar" class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <router-link class="navbar-brand" to="/">
+          Lee's Resume(Technologies Used)
+        </router-link>
+        <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#nav-collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <router-link class="nav-link" to="/">Home</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/categories">Categories</router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-    }
-  }
-}
-</script>
-
 <style lang="scss">
-#othernavabr .navbar {
-  background: #1f2229;
+#othernavbar {
+  .navbar {
+    background: #1f2229;
+  }
 }
 </style>

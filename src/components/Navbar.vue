@@ -1,54 +1,82 @@
 <template>
-  <div id="navabr">
-    <b-navbar toggleable="lg" type="dark" fixed="top" v-b-scrollspy="{offset:100, method:'auto'}" :class="{change_color: scrollPosition > 300}" class="home-navbar">
-      <b-navbar-brand to="/">Lee's Resume</b-navbar-brand>
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item v-scroll-to="{ element: '#introduce', duration: 500, easing: 'linear' }">About Me</b-nav-item>
-          <b-nav-item v-scroll-to="{ element: '#skill', duration: 500, easing: 'linear' }">Professional Skills</b-nav-item>
-          <b-nav-item v-scroll-to="{ element: '#portfolio', duration: 500, easing: 'linear' }">Web Portfolio</b-nav-item>
-          <b-nav-item v-scroll-to="{ element: '#experience', duration: 500, easing: 'linear' }">Experience</b-nav-item>
-          <b-nav-item><router-link to="/categories/posts">Articles</router-link></b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
+  <div id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top home-navbar"
+        :class="{'change_color': scrollPosition > 300}"
+        data-bs-spy="scroll"
+        data-bs-target="#navbar"
+        data-bs-offset="100">
+      <div class="container-fluid">
+        <router-link class="navbar-brand" to="/">Lee's Resume</router-link>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-collapse">
+          <ul class="navbar-nav ms-auto">
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#introduce" v-scroll-to="{ element: '#introduce', duration: 500, easing: 'linear' }">About Me</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#skill" v-scroll-to="{ element: '#skill', duration: 500, easing: 'linear' }">Professional Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio" v-scroll-to="{ element: '#portfolio', duration: 500, easing: 'linear' }">Web Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience" v-scroll-to="{ element: '#experience', duration: 500, easing: 'linear' }">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education" v-scroll-to="{ element: '#education', duration: 500, easing: 'linear' }">Education</a>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/categories/posts">Articles</router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
 </template>
 
 <script>
-export default {
-  data () {
+import { defineComponent, ref, onMounted, onUnmounted } from 'vue'
+
+export default defineComponent({
+  setup() {
+    const scrollPosition = ref(null)
+
+    const updateScroll = () => {
+      scrollPosition.value = window.scrollY
+    }
+
+    onMounted(() => {
+      window.addEventListener('scroll', updateScroll)
+    })
+
+    onUnmounted(() => {
+      window.removeEventListener('scroll', updateScroll)
+    })
+
     return {
-      scrollPosition: null
+      scrollPosition
     }
-  },
-  methods: {
-    onActivate (target) {
-      console.log('Receved Event: scrollspy::activate for target ', target)
-    },
-    updateScroll () {
-      this.scrollPosition = window.scrollY
-    }
-  },
-  created () {
-    this.$root.$on('scrollspy::activate', this.onActivate)
-  },
-  mounted () {
-    window.addEventListener('scroll', this.updateScroll)
   }
-}
+})
 </script>
 
 <style lang="scss">
-  .change_color {
-    background-color:#1f2229;
+.change_color {
+  background-color: #1f2229;
+}
+
+.home-navbar {
+  .navbar-nav {
+    .nav-link {
+      &:hover {
+        color: rgba(255,255,255,.75);
+      }
+      color: rgba(255,255,255,.5);
+      text-decoration: none;
+    }
   }
-  .home-navbar .navbar-nav .nav-link:hover a{
-    color: rgba(255,255,255,.75);
-  }
-  .home-navbar .navbar-nav .nav-link a{
-    color: rgba(255,255,255,.5);
-    text-decoration: none;
-  }
+}
 </style>
