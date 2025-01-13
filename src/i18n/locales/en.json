@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "title": "Lee's Resume",
+    "skills": "Professional Skills",
+    "portfolio": "Web Portfolio",
+    "experience": "Experience",
+    "education": "Education",
+    "docs": "Docs"
+  },
+  "project": {
+    "accommodation": {
+      "title": "Accommodation System"
+    },
+    "travelERP": {
+      "title": "Travel Enterprise resource planning (ERP) Demo",
+      "highlight": "Key",
+      "description": "I developed a travel ERP system interface by converting outdated CSS into a structured SCSS framework, boosting efficiency by 80%. I created a customizable SCSS management system, collaborated with Java engineers on Restful APIs and AJAX integration, and used Git for version control."
+    },
+    "faq": {
+      "title": "FAQ Website"
+    }
+  },
+  "skills": {
+    "frontend": "Frontend Development",
+    "backend": "Backend Technologies",
+    "design": "Visual Design",
+    "language": "Language Proficiency"
+  },
+  "portfolio": {
+    "vueEcommerce": {
+      "title": "Vue E-Commerce Website",
+      "text": [
+        "Features: Product browsing, adding items to cart, user registration/login, and order submission.",
+        "Frontend: Vue CLI, BootstrapVue, Responsive Web Design, Axios for API requests.",
+        "Backend: Node.js, MongoDB."
+      ]
+    },
+    "vuePomodoro": {
+      "title": "Vue Pomodoro Timer",
+      "text": [
+        "Features: Timer with To-Do List, alarm sound selection, and PWA support.",
+        "Built with Vuex and Vue Router."
+      ]
+    },
+    "cssGarden": {
+      "title": "CSS ZEN GARDEN",
+      "text": [
+        "Created a forest-themed page using only CSS and vanilla JavaScript without altering the HTML structure or using plugins.",
+        "Implemented animations with &#64;keyframes and parallax scrolling effects."
+      ]
+    },
+    "cardGame": {
+      "title": "Tourist Spot Matching Card Game",
+      "text": [
+        "A card-matching game created with jQuery and CSS 3D transformations."
+      ]
+    },
+    "alienGame": {
+      "title": "Alien Cow Abduction Game",
+      "text": [
+        "A DOM manipulation and animation practice game where cows appear randomly."
+      ]
+    },
+    "lineBot": {
+      "title": "LINE Chatbot",
+      "text": [
+        "A chatbot integrated with a seasonal produce website.",
+        "Deployed on Heroku using Node.js."
+      ]
+    }
+  },
+  "experience": {
+    "riversoft": {
+      "time": "Apr 2021 - Jul 2023",
+      "company": "Riversoft Inc. / Frontend Developer",
+      "duty": [
+        "Developed user-friendly web pages using Vue.js, focusing on intuitive navigation and optimizing for accessibility.",
+        "Collaborated with clients to define and implement the overall visual design and structure of websites.",
+        "Gathered client feedback and worked on adjustments to create customized solutions that fit their requirements.",
+        "Ensured the technical feasibility of UI/UX designs and optimized applications for maximum speed and scalability."
+      ]
+    },
+    "globalEyes": {
+      "time": "May 2019 - Jun 2020",
+      "company": "Global Eyes Corporation / Product Marketing Manager",
+      "duty": [
+        "Managed the product development and strategic direction for the Syncfo Coffee Analyzer, driving innovation and market relevance.",
+        "Established a Shopify website for Syncfo, leading to a remarkable 40% increase in sales.",
+        "Actively involved in managing and optimizing social media channels for four brands—Syncfo, Atilla, ICMC, and Cafe Bank—enhancing brand visibility and engagement.",
+        "During the 2019 WOC Berlin exhibition, successfully increased product sales by 2x post-exhibition by showcasing award-winning products."
+      ]
+    },
+    "ohStudy": {
+      "time": "Jun 2017 - Aug 2018",
+      "company": "OH! Study Education Consulting Center / Study Abroad Consultant",
+      "duty": [
+        "Assisted students with school applications, visa processing, accommodation, and pre-departure guidance for destinations like the US, Canada, UK, New Zealand, and Australia.",
+        "Supported educational fairs, campus activities, and presentations."
+      ]
+    },
+    "yellowstone": {
+      "time": {
+        "0": "Jun 2016 - Nov 2016",
+        "1": "Jun 2015 - Oct 2015"
+      },
+      "company": "Yellowston National park / Xanterra Travel Collection / Summer Internship",
+      "duty": [
+        "Secured an overseas internship during university.",
+        "Maintained professional standards in service quality and teamwork."
+      ]
+    }
+  },
+  "education": {
+    "conestoga": {
+      "title": "Conestoga College, Advanced Diploma, Software Engineering Technology",
+      "date": "Sep 2023 ~ Present",
+      "highlights": [
+        "Advanced Diploma program focusing on software development",
+        "Specializing in web development, databases, and emerging technologies"
+      ]
+    },
+    "taishan": {
+      "title": "National Taishan Vocational Training Center, Frontend Web Development",
+      "date": "Aug 2020 – Feb 2021",
+      "highlights": [
+        "Professional certification in Web Development",
+        "Specialized training in modern frontend technologies"
+      ]
+    },
+    "shu": {
+      "title": "Shih Hsin University, Department of Tourism and Leisure Management",
+      "date": "Sep 2012 – Jun 2016",
+      "highlights": [
+        "Bachelor of Science in Tourism and Leisure Management",
+        "Specialized in tourism and hospitality management"
+      ]
+    },
+    "sogang": {
+      "title": "Sogang University, Korean Language Program",
+      "date": "Aug 2018 – Nov 2018",
+      "highlights": [
+        "Completed a 3-month intensive Korean language course, significantly improving my proficiency."
+      ]
+    }
+  }
+}

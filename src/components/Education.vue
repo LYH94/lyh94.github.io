@@ -9,20 +9,20 @@
       <div class="education-box">
         <div class="row g-4">
           <div v-for="education in educations" 
-              :key="education.key"
+              :key="education.id"
               class="col-12">
             <div class="card bg-light border-0 shadow-sm education-card hover-card">
               <div class="card-body">
                 <div class="d-flex justify-content-between flex-wrap mb-3">
-                  <h5 class="card-title fw-bold mb-0">{{ education.title }}</h5>
-                  <span class="badge bg-primary">{{ education.date }}</span>
+                  <h5 class="card-title fw-bold mb-0">{{ t(education.titleKey) }}</h5>
+                  <span class="badge bg-primary">{{ t(education.dateKey) }}</span>
                 </div>
                 <div class="px-2">
                   <ul class="list-disc ps-4">
-                    <li v-for="(highlight, index) in education.highlights" 
-                        :key="index" 
+                    <li v-for="highlightKey in education.highlightKeys" 
+                        :key="highlightKey" 
                         class="mb-2 text-dark">
-                      {{ highlight }}
+                      {{ t(highlightKey) }}
                     </li>
                   </ul>
                 </div>
@@ -35,45 +35,47 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script setup>
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-export default defineComponent({
-  data() {
-    return {
-      educations: [
-        {
-          title: 'Conestoga College, Advanced Diploma, Software Engineering Technology',
-          date: 'Sep 2023 ~ Present',
-          highlights: [
-            'Advanced Diploma program focusing on software development',
-            'Specializing in web development, databases, and emerging technologies'
-          ]
-        },
-        {
-          title: 'National Taishan Vocational Training Center, Frontend Web Development',
-          date: 'Aug 2020 – Feb 2021',
-          highlights: [
-            'Professional certification in Web Development',
-            'Specialized training in modern frontend technologies'
-          ]
-        },
-        {
-          title: 'Shih Hsin University, Department of Tourism and Leisure Management',
-          date: 'Sep 2012 – Jun 2016',
-          highlights: [
-            'Bachelor of Science in Tourism and Leisure Management',
-            'Specialized in tourism and hospitality management'
-          ]},
-        {
-          title: 'Sogang University, Korean Language Program',
-          date: 'Aug 2018 – Nov 2018',
-          highlights: [
-            'Completed a 3-month intensive Korean language course, significantly improving my proficiency.'
-          ]
-        }
-      ]
-    }
+const { t } = useI18n()
+
+const educations = ref([
+  {
+    id: 'conestoga',
+    titleKey: 'education.conestoga.title',
+    dateKey: 'education.conestoga.date',
+    highlightKeys: [
+      'education.conestoga.highlights.0',
+      'education.conestoga.highlights.1'
+    ]
+  },
+  {
+    id: 'taishan',
+    titleKey: 'education.taishan.title',
+    dateKey: 'education.taishan.date',
+    highlightKeys: [
+      'education.taishan.highlights.0',
+      'education.taishan.highlights.1'
+    ]
+  },
+  {
+    id: 'shu',
+    titleKey: 'education.shu.title',
+    dateKey: 'education.shu.date',
+    highlightKeys: [
+      'education.shu.highlights.0',
+      'education.shu.highlights.1'
+    ]
+  },
+  {
+    id: 'sogang',
+    titleKey: 'education.sogang.title',
+    dateKey: 'education.sogang.date',
+    highlightKeys: [
+      'education.sogang.highlights.0'
+    ]
   }
-})
+])
 </script>

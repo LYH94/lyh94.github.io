@@ -19,7 +19,7 @@
                   <span class="ribbon" :class="skill.class">
                     <font-awesome-icon :icon="skill.icon"/>
                   </span>
-                  {{ skill.title }}
+                  {{ t(skill.titleKey) }}
                 </h5>
                 <div class="card-text">
                   <ul class="list-square ps-3">
@@ -41,39 +41,41 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCss3Alt } from '@fortawesome/free-brands-svg-icons'
 import { faLaptopCode, faPenFancy, faLanguage } from '@fortawesome/free-solid-svg-icons'
 
-// Add icons to library
+const { t } = useI18n()
+
 library.add(faCss3Alt, faLaptopCode, faPenFancy, faLanguage)
 
 const skills = ref([
   {
     icon: ['fab', 'css3-alt'],
-    title: 'Frontend Development',
+    titleKey: 'skills.frontend',
     text: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery', 'Vue.js'],
     dataAos: ['fade-right'],
     class: 'ribbon1'
   },
   {
     icon: ['fas', 'laptop-code'],
-    title: 'Backend Technologies',
+    titleKey: 'skills.backend',
     text: ['C', 'C++', 'C#', 'Node.js', 'MongoDB'],
     dataAos: ['fade-left'],
     class: 'ribbon2'
   },
   {
     icon: ['fas', 'pen-fancy'],
-    title: 'Visual Design',
+    titleKey: 'skills.design',
     text: ['Photoshop', 'Illustrator', 'Figma', 'UI / UX'],
     dataAos: ['fade-right'],
     class: 'ribbon3'
   },
   {
     icon: ['fas', 'language'],
-    title: 'Language Proficiency',
+    titleKey: 'skills.language',
     text: ['English', 'Chinese', 'Korean'],
     dataAos: ['fade-left'],
     class: 'ribbon4'

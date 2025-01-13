@@ -12,6 +12,8 @@ body {
 }
 
 a {
+  color: inherit;
+  text-decoration: none;
   &:hover {
     text-decoration: none;
   }
@@ -374,4 +376,36 @@ a {
   &:hover {
     background: rgba($white, .9);
   }
+}
+
+.btn-slide-layer {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  touch-action: manipulation;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.btn-slide-layer:after {
+  content: "";
+  background-color: #ffe54c;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s;
+}
+
+.btn-slide-layer:hover:after {
+  top: 0px;
+  left: 0px;
 }

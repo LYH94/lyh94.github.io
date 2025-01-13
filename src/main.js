@@ -1,4 +1,7 @@
 import { createApp } from 'vue'
+import { createI18n } from 'vue-i18n'
+import zh_TW from './i18n/locales/zh-TW.json'
+import en from './i18n/locales/en.json'
 import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
@@ -32,6 +35,16 @@ library.add(faGithub, faCss3Alt, faLaptopCode, faPenFancy, faLanguage, faGraduat
 
 const app = createApp(App)
 
+const i18n = createI18n({
+  legacy: false,
+  locale: 'en',
+  fallbackLocale: 'en',
+  messages: {
+    'zh-TW': zh_TW,
+    'en': en
+  }
+})
+
 // Register components
 app.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -45,5 +58,6 @@ app.use(VueScrollTo)
 app.use(Vue3Lottie)
 app.use(LoadingPlugin);
 app.use(InstallCodeMirror);
+app.use(i18n)
 
 app.mount('#app')

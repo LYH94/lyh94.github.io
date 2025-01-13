@@ -6,29 +6,43 @@
         data-bs-target="#navbar"
         data-bs-offset="100">
       <div class="container-fluid">
-        <router-link class="navbar-brand" to="/">Lee's Resume</router-link>
+        <router-link class="navbar-brand" to="/">{{ t('nav.title') }}</router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-collapse">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="nav-collapse">
           <ul class="navbar-nav ms-auto">
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#introduce" v-scroll-to="{ element: '#introduce', duration: 500, easing: 'linear' }">About Me</a>
-            </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#skill" v-scroll-to="{ element: '#skill', duration: 500, easing: 'linear' }">Professional Skills</a>
+              <a class="nav-link" href="#skill" v-scroll-to="{ element: '#skill', duration: 500, easing: 'linear' }">
+                {{ t('nav.skills') }}
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio" v-scroll-to="{ element: '#portfolio', duration: 500, easing: 'linear' }">Web Portfolio</a>
+              <a class="nav-link" href="#portfolio" v-scroll-to="{ element: '#portfolio', duration: 500, easing: 'linear' }">
+                {{ t('nav.portfolio') }}
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#experience" v-scroll-to="{ element: '#experience', duration: 500, easing: 'linear' }">Experience</a>
+              <a class="nav-link" href="#experience" v-scroll-to="{ element: '#experience', duration: 500, easing: 'linear' }">
+                {{ t('nav.experience') }}
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#education" v-scroll-to="{ element: '#education', duration: 500, easing: 'linear' }">Education</a>
+              <a class="nav-link" href="#education" v-scroll-to="{ element: '#education', duration: 500, easing: 'linear' }">
+                {{ t('nav.education') }}
+              </a>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/categories/posts">Articles</router-link>
+              <router-link class="nav-link" to="/categories/posts">{{ t('nav.docs') }}</router-link>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <font-awesome-icon :icon="['fas', 'language']" />
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#" @click="changeLocale('zh-TW')">繁體中文</a></li>
+                <li><a class="dropdown-item" href="#" @click="changeLocale('en')">English</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -37,29 +51,27 @@
   </div>
 </template>
 
-<script>
-import { defineComponent, ref, onMounted, onUnmounted } from 'vue'
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-export default defineComponent({
-  setup() {
-    const scrollPosition = ref(null)
+const { t, locale } = useI18n()
+const scrollPosition = ref(null)
 
-    const updateScroll = () => {
-      scrollPosition.value = window.scrollY
-    }
+const updateScroll = () => {
+  scrollPosition.value = window.scrollY
+}
 
-    onMounted(() => {
-      window.addEventListener('scroll', updateScroll)
-    })
+const changeLocale = (lang) => {
+  locale.value = lang
+}
 
-    onUnmounted(() => {
-      window.removeEventListener('scroll', updateScroll)
-    })
+onMounted(() => {
+  window.addEventListener('scroll', updateScroll)
+})
 
-    return {
-      scrollPosition
-    }
-  }
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateScroll)
 })
 </script>
 
