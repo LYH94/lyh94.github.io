@@ -8,8 +8,8 @@
     "docs": "Docs"
   },
   "project": {
-    "accommodation": {
-      "title": "Accommodation System"
+    "travelSite": {
+      "title": "Travel Platform"
     },
     "travelERP": {
       "title": "Travel Enterprise resource planning (ERP) Demo",

@@ -7,19 +7,19 @@
       </div>
       <div class="row g-0 align-items-center mb-lg-4">
         <div class="col-6 col-md-3 mb-3 project-box">
-          <a href="https://zhida.clicugo.com/C/tw/home">
+          <a href="https://utravel.udn.com/C/tw/home">
             <div class="project-list">
               <div class="project-list-img-box">
                 <img 
                   src="https://img.freepik.com/free-vector/happy-tourists-choosing-hotel-booking-room-online-flat-illustration_74855-10811.jpg?t=st=1653031087~exp=1653031687~hmac=921aa588a28d290df713568c88271fd0b41b69cb77da95c069f5b362626d7345&w=1800" 
                   class="project-list-img" 
-                  :alt="t('project.accommodation.title')"
+                  :alt="t('project.travelSite.title')"
                 >
                 <div class="img-overlay">
                   <font-awesome-icon :icon="['fas', 'link']"/>
                 </div>
               </div>
-              <div class="text-white text-center mt-2">{{ t('project.accommodation.title') }}</div>
+              <div class="text-white text-center mt-2">{{ t('project.travelSite.title') }}</div>
             </div>
           </a>
         </div>
