@@ -142,5 +142,15 @@
         "Completed a 3-month intensive Korean language course, significantly improving my proficiency."
       ]
     }
+  },
+  "footer": {
+    "copyright": "© 2025 All rights reserved",
+    "madeby": "This page is made by Lee",
+    "email": {
+      "tooltip": "Send me an email"
+    },
+    "linkedin": {
+      "tooltip": "Visit my LinkedIn profile"
+    }
   }
 }

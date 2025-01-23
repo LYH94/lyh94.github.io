@@ -29,9 +29,9 @@ import './assets/scss/style.scss'
 
 import { faLaptopCode, faPenFancy, faLanguage, faGraduationCap, faChevronUp, faChild, faLink } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope, faFolder } from '@fortawesome/free-regular-svg-icons'
-import { faGithub, faCss3Alt } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faCss3Alt, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faGithub, faCss3Alt, faLaptopCode, faPenFancy, faLanguage, faGraduationCap, faChevronUp, faEnvelope, faChild, faLink, faFolder)
+library.add(faGithub, faLinkedin, faCss3Alt, faLaptopCode, faPenFancy, faLanguage, faGraduationCap, faChevronUp, faEnvelope, faChild, faLink, faFolder)
 
 const app = createApp(App)
 

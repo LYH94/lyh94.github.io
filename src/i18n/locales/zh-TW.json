@@ -142,5 +142,15 @@
         "完成三個月密集韓語課程，顯著提升韓語能力"
       ]
     }
+  },
+  "footer": {
+    "copyright": "© 2025 版權所有",
+    "madeby": "本網頁由 Lee 製作",
+    "email": {
+      "tooltip": "點擊寄送郵件"
+    },
+    "linkedin": {
+      "tooltip": "查看我的 LinkedIn 檔案"
+    }
   }
 }
