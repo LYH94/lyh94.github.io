@@ -46,7 +46,7 @@
       "title": "CSS ZEN GARDEN",
       "text": [
         "僅使用 CSS 和原生 JavaScript 創建森林主題頁面，不更改 HTML 結構且不使用插件",
-        "實現 &#64;keyframes 動畫和視差滾動效果"
+        "實現 @keyframes 動畫和視差滾動效果"
       ]
     },
     "cardGame": {

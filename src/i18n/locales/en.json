@@ -46,7 +46,7 @@
       "title": "CSS ZEN GARDEN",
       "text": [
         "Created a forest-themed page using only CSS and vanilla JavaScript without altering the HTML structure or using plugins.",
-        "Implemented animations with &#64;keyframes and parallax scrolling effects."
+        "Implemented animations with @keyframes and parallax scrolling effects."
       ]
     },
     "cardGame": {
